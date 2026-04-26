@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhotoHome</title>
+
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+    <div class="brand">PhotoHome 92</div>
+
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#footer">About</a>
+        <a href="#" onclick="openContact()">Contact</a>
+
+        <a href="cart.html">🛒 Cart <span id="cartCount">0</span></a>
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+
+    <h1>Your Photos. Our Craft. One Perfect Creation.</h1>
+
+    <p>Turn your memories into premium custom products that last forever.</p>
+
+    <a href="#products" class="hero-btn">Explore Collection</a>
+
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<div class="container" id="products">
+    <div id="productGrid" class="grid"></div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-box" id="contactBox" style="display:none;">
+    <div class="contact-content">
+        <h3>Contact Us</h3>
+        <p>📞 03338181082</p>
+        <p>📧 photohome92@gmail.com</p>
+        <button onclick="closeContact()">Close</button>
+    </div>
+</div>
+
+<!-- FOOTER (YOUR ORIGINAL STYLE KEPT SIMPLE, NOT CHANGED) -->
+<div class="footer" id="footer">
+
+    <div class="footer-grid">
+
+        <div class="footer-col">
+            <h2>PhotoHome</h2>
+            <p>
+                PhotoHome transforms your memories into premium custom products like frames, mugs, cushions, shirts, albums and more.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#footer">About Us</a></li>
+                <li><a href="#" onclick="openContact()">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Products</h3>
+            <ul>
+                <li>Frames</li>
+                <li>Mugs</li>
+                <li>Shirts</li>
+                <li>Cushions</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>📞 03338181082</p>
+            <p>📧 photohome92@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 PhotoHome | All Rights Reserved</p>
+    </div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

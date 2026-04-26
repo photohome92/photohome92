@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+    <div class="brand">PhotoHome</div>
+    <a href="index.html" style="color:white;">⬅ Back</a>
+</div>
+
+<!-- PRODUCT -->
+<div class="product-page">
+
+    <img id="mainImg" src="images/default.jpg">
+
+    <div class="slider-btns">
+        <button onclick="prevImg()">⬅</button>
+        <button onclick="nextImg()">➡</button>
+    </div>
+
+    <h2 id="name"></h2>
+    <p id="desc"></p>
+    <h3 id="price"></h3>
+
+    <button onclick="addToCartSingle()">Add To Cart</button>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+/* ================= SAFE PRODUCT INIT ================= */
+document.addEventListener("DOMContentLoaded", () => {
+
+let id = localStorage.getItem("product");
+
+/* safety check */
+if(id === null || !products[id]){
+console.log("No product selected");
+return;
+}
+
+let p = products[id];
+
+document.getElementById("name").innerText = p.name;
+document.getElementById("desc").innerText = p.desc;
+document.getElementById("price").innerText = "Rs " + p.price;
+
+/* slider setup */
+window.images = p.imgs;
+window.index = 0;
+
+/* show first image */
+showImg();
+
+});
+</script>
+
+</body>
+</html>
