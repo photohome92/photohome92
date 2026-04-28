@@ -117,3 +117,24 @@ document.getElementById("contactBox").style.display="flex";
 function closeContact(){
 document.getElementById("contactBox").style.display="none";
 }
+function showImg(){
+let img = document.getElementById("mainImg");
+if(!img) return;
+
+img.src = window.images[window.index];
+
+img.onerror = function(){
+this.onerror = null;
+this.src = "images/default.jpg";
+};
+}
+
+function nextImg(){
+window.index = (window.index + 1) % window.images.length;
+showImg();
+}
+
+function prevImg(){
+window.index = (window.index - 1 + window.images.length) % window.images.length;
+showImg();
+}
